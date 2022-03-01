@@ -2,13 +2,13 @@ package main;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-
-        int myFavoriteNumber = 22;
-        System.out.println(myFavoriteNumber);
-
-        String myString = "My wife and I were both born on day 22 of our respective months";
-        System.out.println(myString);
+//        System.out.println("Hello, World!");
+//
+//        int myFavoriteNumber = 22;
+//        System.out.println(myFavoriteNumber);
+//
+//        String myString = "My wife and I were both born on day 22 of our respective months";
+//        System.out.println(myString);
 
         // q3-4 java won't let you reassign a variable once it is defined
 //        char myString = 3.14159 ;
@@ -31,8 +31,8 @@ public class HelloWorld {
 
         // q9 it gives the message: java: incompatible types: possible lossy conversion from double to float.
         // We could convert the data type to a double or add an f at the end of the number
-        float myNumber = 3.14f;
-        System.out.println(myNumber);
+//        float myNumber = 3.14f;
+//        System.out.println(myNumber);
 
         // q10 the first one prints 5 then 6, the next prints 6, then 6.
         // The difference is where the unary incrementer is placed (pre- or -post operand)
@@ -85,8 +85,8 @@ public class HelloWorld {
 
 //        byte number = 128;
 //        System.out.println(number);
-        byte number2 = 127;
-        number2++;
-        System.out.println(number2);
+//        byte number2 = 127;
+//        number2++;
+//        System.out.println(number2);
     }
 }
