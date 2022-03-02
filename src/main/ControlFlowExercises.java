@@ -124,9 +124,9 @@ public class ControlFlowExercises {
         //                3      | 9       | 27
         //                4      | 16      | 64
         //                5      | 25      | 125
-        Scanner tableScanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number:");
-        String userInput = tableScanner.nextLine();
+        String userInput = scanner.nextLine();
         long parsedUserInput = Integer.parseInt(userInput);
 
         String numberColumn = "number";
@@ -142,6 +142,54 @@ public class ControlFlowExercises {
             System.out.printf("%-7d| %-8d| %-5d\n", parsedUserInput, inputSquared, inputCubed);
              parsedUserInput += 1;
         }
-                tableScanner.close();
+
+
+//        4. Convert given number grades into letter grades.
+//
+//                Prompt the user for a numerical grade from 0 to 100.
+//                Display the corresponding letter grade.
+//                Prompt the user to continue.
+//                Assume that the user will enter valid integers for the grades.
+//                The application should only continue if the user agrees to.
+//                Grade Ranges:
+//
+//                    A : 100 - 88
+//                    B : 87 - 80
+//                    C : 79 - 67
+//                    D : 66 - 60
+//                    F : 59 - 0
+//        Bonus
+//            Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+        System.out.println("Please enter your hypothetical grade for a letter conversion.");
+        String gradeInput = scanner.nextLine();
+        int parsedGrade = Integer.parseInt(gradeInput);
+        if (parsedGrade < 60) {
+            System.out.println("Your letter grade is: F");
+        } else if (parsedGrade < 63) {
+            System.out.println("Your letter grade is: D-");
+        } else if (parsedGrade < 66) {
+            System.out.println("Your letter grade is: D");
+        } else if (parsedGrade < 70) {
+            System.out.println("Your letter grade is: D+");
+        } else if (parsedGrade < 73) {
+            System.out.println("Your letter grade is: C-");
+        } else if (parsedGrade < 76) {
+            System.out.println("Your letter grade is: C");
+        } else if (parsedGrade < 80) {
+            System.out.println("Your letter grade is: C+");
+        } else if (parsedGrade < 83) {
+            System.out.println("Your letter grade is: B-");
+        } else if (parsedGrade < 86) {
+            System.out.println("Your letter grade is: B");
+        } else if (parsedGrade < 90) {
+            System.out.println("Your letter grade is: B+");
+        } else if (parsedGrade < 93) {
+            System.out.println("Your letter grade is: A-");
+        } else if (parsedGrade < 96) {
+            System.out.println("Your letter grade is: A");
+        } else if (parsedGrade <= 100) {
+            System.out.println("Your letter grade is: A+");
+        }
+        scanner.close();
     }
 }
