@@ -125,7 +125,7 @@ public class ControlFlowExercises {
         //                4      | 16      | 64
         //                5      | 25      | 125
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number:");
+        System.out.println("Enter a number to be squared and cubed:");
         String userInput = scanner.nextLine();
         long parsedUserInput = Integer.parseInt(userInput);
 
@@ -160,7 +160,7 @@ public class ControlFlowExercises {
 //                    F : 59 - 0
 //        Bonus
 //            Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
-        System.out.println("Please enter your hypothetical grade for a letter conversion.");
+        System.out.println("Please enter your grade for a free letter grade conversion.");
         String gradeInput = scanner.nextLine();
         int parsedGrade = Integer.parseInt(gradeInput);
         if (parsedGrade < 60) {
