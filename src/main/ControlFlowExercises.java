@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        1. Loop Basics
@@ -93,17 +95,53 @@ public class ControlFlowExercises {
 //            count += 1;
 //        } while (count <= 100);
 //                For numbers which are multiples of both three and five: print “FizzBuzz”.
-        int count = 1;
-        do {
-            if (count % 3 == 0 || count % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else {
-                System.out.println(count);
-            }
-            count += 1;
-        } while (count <= 100);
+//        int count = 1;
+//        do {
+//            if (count % 3 == 0 || count % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else {
+//                System.out.println(count);
+//            }
+//            count += 1;
+//        } while (count <= 100);
 
+//        2. Display a table of powers.
+//                Prompt the user to enter an integer.
+//                Display a table of squares and cubes from 1 to the value entered.
+//                Ask if the user wants to continue.
+//                Assume that the user will enter valid data.
+//                Only continue if the user agrees to.
+//                Example Output
 
+        //        What number would you like to go up to? 5
+        //
+        //        Here is your table!
+        //
+        //                number | squared | cubed
+        //                ------ | ------- | -----
+        //                1      | 1       | 1
+        //                2      | 4       | 8
+        //                3      | 9       | 27
+        //                4      | 16      | 64
+        //                5      | 25      | 125
+        Scanner tableScanner = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        String userInput = tableScanner.nextLine();
+        long parsedUserInput = Integer.parseInt(userInput);
 
+        String numberColumn = "number";
+        String squaredColumn = "squared";
+        String cubedColumn = "cubed";
+
+        System.out.printf("%s | %s | %s\n", numberColumn, squaredColumn, cubedColumn);
+        System.out.println("------ | ------- | -----");
+
+        for (long i = 0; i < 5; i++) {
+            long inputSquared = parsedUserInput * parsedUserInput;
+            long inputCubed = parsedUserInput * parsedUserInput * parsedUserInput;
+            System.out.printf("%-7d| %-8d| %-5d\n", parsedUserInput, inputSquared, inputCubed);
+             parsedUserInput += 1;
+        }
+                tableScanner.close();
     }
 }
