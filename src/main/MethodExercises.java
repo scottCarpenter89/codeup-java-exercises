@@ -15,10 +15,15 @@ public class MethodExercises {
         System.out.println(multiply(7, 3));
         System.out.println(divide(25, 5));
         System.out.println();
+
         int userInput = getInteger(1, 10);
         System.out.println(userInput);
+
         factorial(1, 10, sc);
 
+        System.out.println("Let's play a game using dice. How many sides are there on the pair of die that we are using?");
+        int userDieSides = sc.nextInt();
+        dieRoll(userDieSides, sc);
     }
 
 
@@ -100,5 +105,20 @@ public class MethodExercises {
         }
     }
 
+    public static void dieRoll(int die, Scanner scanner) {
+        System.out.println("Type \"roll\" when you're ready to play.");
+        String play = scanner.next();
+        if (play.equalsIgnoreCase("roll")) {
+            System.out.println("The die are rolling...");
+            int dieRoll = (int) (Math.random() * die) + 1;
+            System.out.printf("You rolled a %d %n", dieRoll);
+        }
+        System.out.println("Would you like roll again? (y/n)");
+        String playAgain = scanner.next();
+        if (playAgain.equals("y")) {
+            dieRoll(die, scanner);
+
+        }
+    }
 
 }
