@@ -117,8 +117,8 @@ public class MethodExercises {
         String playAgain = scanner.next();
         if (playAgain.equals("y")) {
             dieRoll(die, scanner);
-
         }
     }
+
 
 }
