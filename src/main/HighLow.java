@@ -7,11 +7,12 @@ public class HighLow {
 
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do play a number guessing game! (y/n)");
+        System.out.println("Do you want to play a number guessing game! (y/n)");
         String playGame = sc.nextLine();
         randomNumber(sc, playGame);
 
     }
+
     public static void randomNumber(Scanner sc, String userPlaying) {
         if (userPlaying.equalsIgnoreCase("y")) {
             int randomNumber = (int) (Math.random() * 100) + 1;
@@ -20,12 +21,10 @@ public class HighLow {
             System.out.println("Maybe some other time then.");
             return;
         }
-
     }
 
 
     public static void highLowGame(int attempts, int randomNumber, Scanner sc) {
-//        int attemptsLeft = attempts;
         System.out.println("Guess any number between 1 and 100.");
         int userGuess = sc.nextInt();
 //        System.out.println("Test. The random number is: " + randomNumber);
