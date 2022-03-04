@@ -17,7 +17,7 @@ public class MethodExercises {
         System.out.println();
         int userInput = getInteger(1, 10);
         System.out.println(userInput);
-//        System.out.println(factorial(1, 10, sc));
+        factorial(1, 10, sc);
 
     }
 
@@ -72,14 +72,33 @@ public class MethodExercises {
     }
 
 
-//    public static long factorial(int min, int max, Scanner scanner) {
-//        System.out.println("Enter a number from " + min + "to" + max + ".");
-//        System.out.println("Calculating a factorial from your number, continue? (y/n");
-//        String userAnswer = scanner.nextLine();
-//        if (userAnswer.equals("n")) {
-//
-//        }
-//    }
+    public static void factorial(int min, int max, Scanner scanner) {
+        System.out.println("Enter a number from " + min + " to " + max + " to calculate a factorial.");
+        long userInt = scanner.nextInt();
+        if (userInt < min || userInt > max) {
+            System.out.println(userInt + " is not between " + min + " and " + max + " please try another number.");
+            return;
+        }
+        System.out.println("Continue calculating " + userInt + "? (y/n)");
+        scanner.nextLine();
+        String userAnswer = scanner.nextLine();
+        if (userAnswer.equals("y")) {
+            long factorialProduct = 1;
+            String factorialStr = userInt + "!" + " = ";
+            for (int i = 1; i <= userInt; i++) {
+                factorialStr += i + " x ";
+                factorialProduct *= i;
+            }
+            System.out.println(factorialStr + "= " + factorialProduct);
+        }
+        System.out.println("Do you want to calculate another number? (y/n)");
+        String tryAgain = scanner.nextLine();
+        if (tryAgain.equals("y")) {
+            factorial(min, max, scanner);
+        } else {
+            return;
+        }
+    }
 
 
 }
