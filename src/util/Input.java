@@ -19,12 +19,12 @@ public class Input {
 
     public Boolean yesNo(String prompt) {
         System.out.println(prompt);
-        String yN = scanner.nextLine();
+        String yN = scanner.next();
         if (yN.equalsIgnoreCase("y")) {
-            System.out.printf("You typed %s. Returning true.", yN);
+//            System.out.printf("You typed %s. Returning true.", yN);
             return true;
         }
-        System.out.printf("You typed %s. Returning false.", yN);
+//        System.out.printf("You typed %s. Returning false.", yN);
         return false;
     }
 
