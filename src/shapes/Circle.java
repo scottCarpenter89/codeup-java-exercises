@@ -2,6 +2,11 @@ package shapes;
 
 public class Circle {
     private double radius;
+    private int counter;
+
+    public Circle(int counter) {
+        this.counter = counter;
+    }
 
     public Circle(double radius) {
         this.radius = radius;
@@ -17,5 +22,9 @@ public class Circle {
         double result = 2 * Math.PI * radius;
 //        System.out.printf("The circumference of the circle is: %d", result);
         return result;
+    }
+
+    public int circleCounter(int n) {
+        return n + 1;
     }
 }
