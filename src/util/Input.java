@@ -9,6 +9,9 @@ public class Input {
         this.scanner = scanner;
     }
 
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
 
     public String getString(String prompt) {
         System.out.println(prompt);
