@@ -35,9 +35,7 @@ public class Input {
         System.out.println(prompt);
 //        System.out.println("Please input a number between " + min + "and " + max);
         int input = scanner.nextInt();
-        if (input > min && input < max) {
-            System.out.println("The number " + input + " is in range!");
-        } else {
+        if (input < min || input > max) {
             System.out.println("Try another number between " + min + " and " + max);
             getInt(min, max, prompt);
         }
