@@ -15,9 +15,9 @@ public class Input {
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        String input = scanner.nextLine();
-        System.out.println("The number input from the user was: " + input);
-        return input;
+//        String input = scanner.nextLine();
+
+        return scanner.nextLine();
     }
 
     public Boolean yesNo(String prompt) {

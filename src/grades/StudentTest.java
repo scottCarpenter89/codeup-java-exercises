@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student scott = new Student("Scott", new ArrayList<>());
+       Student scott = new Student("Scott", new ArrayList<>());
 scott.addGrade(95);
 scott.addGrade(82);
 scott.addGrade(100);
