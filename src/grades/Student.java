@@ -35,5 +35,11 @@ public class Student {
         return average;
     }
 
+    public static void main(String[] args) {
+
+
+
+    }
+
 
 }
