@@ -20,9 +20,10 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public Boolean yesNo(String prompt) {
+    public boolean yesNo(String prompt) {
         System.out.println(prompt);
         String yN = scanner.next();
+        scanner.nextLine();
         if (yN.equalsIgnoreCase("y")) {
 //            System.out.printf("You typed %s. Returning true.", yN);
             return true;
